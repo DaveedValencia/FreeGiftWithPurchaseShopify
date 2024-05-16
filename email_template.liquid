@@ -1,0 +1,22 @@
+{%  assign free_gift =  true %}
+{%  assign free_gift_image =  "REPLACE-WITH-IMAGE-URL" %}
+{%  assign free_gift_minimum =  25 %}
+ 
+ <!-- START FREE GIFT SECTION -->
+  {% if free_gift == true %}
+  {% if subtotal_price >= free_gift_minimum %}
+  <table class="row">
+    <hr>
+    <tr class="order-list__item">
+      <td class="order-list__item__cell">
+        <table>
+          <td class="order-list__image-cell">
+                <img src="{{ free_gift_image }}" align="left" width="60" height="60" class="order-list__product-image"/>
+            </td>
+            <td class="order-list__product-description-cell">
+              <span class="order-list__item-title">FREE GIFT WITH PURCHASE</span><br/>
+              </td>
+  </table>
+  {% endif %}
+{% endif %}
+  <!-- END FREE GIFT SECTION -->
