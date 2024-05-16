@@ -1,0 +1,23 @@
+{% comment %}
+Control when to show free gift on packing slip.
+{% endcomment %}
+{%  assign free_gift =  true %}
+{%  assign free_gift_image =  "REPLACE-WITH-IMAGE-URL" %}
+{%  assign free_gift_minimum =  25 %}
+    
+<!-- free gift start -->
+{% if free_gift == true %}
+    {% if order.subtotal_price > free_gift_minimum %}
+    <div class="flex-line-item">
+        <div class="flex-line-item-img">
+            <div class="aspect-ratio aspect-ratio-square" style="width: {{ desired_image_size }}px; height: {{ desired_image_size }}px;margin-left:10px;">
+            <img src="{{ free_gift_image }}" align="left" width="60" height="60" />
+            </div>
+        </div>
+        <div class="flex-line-item-description">
+            <p>FREE GIFT WITH PURCHASE</p>
+            </div>
+    </div>
+    {% endif %}
+{% endif %}
+<!-- free gift end -->
