@@ -1,11 +1,9 @@
-{% comment %}
-Control when to show free gift on packing slip.
-{% endcomment %}
+<!-- START FREE GIFT -->
 {%  assign free_gift =  true %}
 {%  assign free_gift_image =  "REPLACE-WITH-IMAGE-URL" %}
-{%  assign free_gift_minimum =  25 %}
+{%  assign free_gift_minimum =  25 | times: 100%}
     
-<!-- free gift start -->
+
 {% if free_gift == true %}
     {% if order.subtotal_price > free_gift_minimum %}
     <div class="flex-line-item">
@@ -20,4 +18,4 @@ Control when to show free gift on packing slip.
     </div>
     {% endif %}
 {% endif %}
-<!-- free gift end -->
+<!-- END FREE GIFT -->
