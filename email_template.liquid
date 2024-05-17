@@ -1,12 +1,12 @@
-  <!-- START FREE GIFT SECTION -->
+<!-- START FREE GIFT SECTION -->
 
-  {%  assign free_gift =  true %}
-  {%  assign free_gift_image =  "https://cdn.shopify.com/s/files/1/0785/3680/2586/files/Untitleddesign.png" %}
-  {%  assign free_gift_minimum =  125 | times: 100%}
+{%  assign free_gift =  true %}
+{%  assign free_gift_image =  "https://cdn.shopify.com/s/files/1/0785/3680/2586/files/Untitleddesign.png" %}
+{%  assign free_gift_minimum =  125 | times: 100%}
 
-  {% if free_gift == true %}
+{% if free_gift == true %}
   {% if subtotal_price >= free_gift_minimum %}
-    {{ free_gift_minimum }}
+  
   <table class="row">
     <hr>
     <tr class="order-list__item">
@@ -21,4 +21,4 @@
   </table>
   {% endif %}
 {% endif %}
-  <!-- END FREE GIFT SECTION -->
+<!-- END FREE GIFT SECTION -->
